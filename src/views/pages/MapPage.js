@@ -14,7 +14,8 @@ import GoogleMap from '../components/GoogleMap/GoogleMap.js';
 
 /**
  * TODOs:
- * 1. filter should work instantly, currently it sets a filter up, and filters for next subscription cycle
+ * 1. Currenlty, filtering only works by clicking table row's. Need to work on map marker click handler.
+ * 2. Filtering only updates on the next subscription cycle, this would be easier with redux.
  */
 
 class MapPage extends Component {

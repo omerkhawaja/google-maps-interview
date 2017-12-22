@@ -29,9 +29,9 @@ class DataTable extends Component {
   renderRows() {
     const { data = [], handleRowClickFromProp } = this.props;
     const _this = this;
-    // if (_.size(data) === 0) {
-    //   return <tr>Loading...</tr>;
-    // }
+    if (_.size(data) === 0) {
+      return <tr>Loading...</tr>;
+    }
     return data.map(function(item, index) {
       const tdItems = item.map(function (innerItem, i, options) {
         return <td key={innerItem} onClick={_this.handleRowClick.bind(this, handleRowClickFromProp, options[2].id)}>{innerItem}</td>;

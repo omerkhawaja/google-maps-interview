@@ -66,7 +66,7 @@ class SantoriService {
     const id = _.get(options, 'detail.id');
     const service = _.get(options, 'detail.service');
     service.filterId = id;
-    service.filterMessages.call(service, service.messages, true);
+    service.filterMessages.call(service, service.messages);
   }
 
   filterMessages(data, isFilterNow) {
@@ -74,14 +74,10 @@ class SantoriService {
     let result = data;
     if (_.isString(id)) {
       result = _.filter(data, function(item) {
-        if (id === item.routeId) {
+        if (_.has(item, 'routeId') && id === item.routeId) {
           return item;
         }
       });
-    }
-    if (isFilterNow) {  // TODO: working to make filter work instantly
-      this.messages = result;
-      return;
     }
     return result;
   }
