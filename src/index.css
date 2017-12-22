@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.left {
+  float: left;
+}
+
+table {
+  padding: 10px;
+  border: 1px solid;
+  margin: 10px;
+}
+
+table thead tr {
+  float: left;
+  margin-left: 50px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid;
+}
+
+table tbody tr {
+  line-height: 25px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+table tbody tr:hover {
+  background: #eee;
+}
